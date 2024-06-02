@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+<h1 class="font-semibold text-2xl text-center mt-10">Welcome to Contact Page🙏</h1>
+<hr>
+<div class="w-[20%] m-auto text-center rounded-2xl border border-slate-950 ">
+    <% update.forEach((cont) => { %>
+    <ul class="underline">
+        <hr class=" border border-slate-950"> 
+
+    <li>name: <%= cont.name %></li> <br> 
+    <li>email: <%= cont.email %></li> <br>
+    <li>phone: <%= cont.phone %></li> <br>
+    <li class="underline text-blue-500"><a href="/update/<%= cont._id %>">Update Contact</a></li> 
+    <li class="underline text-red-500"><a href="/delete/<%= cont._id %>">Delete Contact</a></li>
+    <!-- <hr class=" border border-slate-950 p-3">  -->
+ 
+
+    
+
+    </ul>
+   <% }) %>
+</div>
+
+
+<%- include('partials/footer') %>
